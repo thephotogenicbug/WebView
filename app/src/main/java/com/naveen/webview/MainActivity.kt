@@ -19,4 +19,14 @@ class MainActivity : AppCompatActivity() {
 
         webView.loadUrl("https://google.com")
     }
+
+    override fun onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack()
+        }else{
+            super.onBackPressed()
+        }
+
+
+    }
 }
